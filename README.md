@@ -21,7 +21,7 @@ An object detection camera device M5StickV software for LEGO Mindstroms 51515 Ro
 
 # 使い方
 
-Qiitaの記事を参照（近日公開予定）
+[Qiitaの記事を参照](https://qiita.com/sonoisa/items/1ddde98611ceb772b090)
 
 # 謝辞
 
