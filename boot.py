@@ -27,7 +27,7 @@ from machine import I2C
 from Maix import I2S, GPIO
 import KPU as kpu
 import math
-from LPF2 import SpikePrimeDevice
+from LPF2_mindstorms import MindstromsDevice
 
 
 IMAGES_DIR = "/sd/images"
@@ -235,7 +235,7 @@ else:
         sp_device = None
         if should_connect_spike_prime:
             show_message("Connecting to LPF2 Hub...", x=100, bg_color=lcd.BLACK)
-            sp_device = SpikePrimeDevice(tx_pin=34, rx_pin=35)
+            sp_device = MindstromsDevice(tx_pin=34, rx_pin=35)
             sp_device.initialize()
 
             while True:
@@ -259,7 +259,7 @@ else:
                     min_dist = dist
 
             if sp_device is not None:
-                sp_device.set_data(similar_class)
+                sp_device.set_data(similar_class * 10)
 
             if similar_class > 0:
                 img.draw_rectangle(0, 60, 320, 1, color=(0, 144, 255), thickness=10)
